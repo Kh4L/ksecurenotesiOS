@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B15AB8B31C908C2F00594A39 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B15AB8B11C908C2F00594A39 /* Model.xcdatamodeld */; };
+		B15AB8B61C90A69700594A39 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15AB8B51C90A69700594A39 /* SVProgressHUD.framework */; };
+		B15AB8BA1C90A71100594A39 /* NotesListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15AB8B91C90A71100594A39 /* NotesListTVC.swift */; };
+		B15AB8BD1C90AA3700594A39 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15AB8B51C90A69700594A39 /* SVProgressHUD.framework */; };
+		B15AB8BE1C90AA3700594A39 /* SVProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B15AB8B51C90A69700594A39 /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B15AB8C91C90AD7800594A39 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15AB8C71C90AD7800594A39 /* Note+CoreDataProperties.swift */; };
+		B15AB8CA1C90AD7800594A39 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15AB8C81C90AD7800594A39 /* Note.swift */; };
+		B15AB8CC1C90ADCF00594A39 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15AB8CB1C90ADCF00594A39 /* DataController.swift */; };
+		B15AB8CE1C90AE9E00594A39 /* NoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15AB8CD1C90AE9E00594A39 /* NoteVC.swift */; };
 		B1AC86C81C8F15F700970F8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AC86C71C8F15F700970F8B /* AppDelegate.swift */; };
 		B1AC86CA1C8F15F700970F8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AC86C91C8F15F700970F8B /* ViewController.swift */; };
 		B1AC86CD1C8F15F700970F8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1AC86CB1C8F15F700970F8B /* Main.storyboard */; };
@@ -15,7 +24,29 @@
 		B1AC86DA1C8F167D00970F8B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AC86D91C8F167D00970F8B /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B15AB8BF1C90AA3700594A39 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B15AB8BE1C90AA3700594A39 /* SVProgressHUD.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B15AB8B21C908C2F00594A39 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		B15AB8B51C90A69700594A39 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = SOURCE_ROOT; };
+		B15AB8B91C90A71100594A39 /* NotesListTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesListTVC.swift; sourceTree = "<group>"; };
+		B15AB8C01C90AD5600594A39 /* iOSExperiments-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSExperiments-Bridging-Header.h"; sourceTree = "<group>"; };
+		B15AB8C71C90AD7800594A39 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataProperties.swift"; path = "../Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B15AB8C81C90AD7800594A39 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Note.swift; path = ../Note.swift; sourceTree = "<group>"; };
+		B15AB8CB1C90ADCF00594A39 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		B15AB8CD1C90AE9E00594A39 /* NoteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteVC.swift; sourceTree = "<group>"; };
 		B1AC86C41C8F15F700970F8B /* iOSExperiments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSExperiments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1AC86C71C8F15F700970F8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1AC86C91C8F15F700970F8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +62,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B15AB8BD1C90AA3700594A39 /* SVProgressHUD.framework in Frameworks */,
+				B15AB8B61C90A69700594A39 /* SVProgressHUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B15AB8B41C90A5EF00594A39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B15AB8B51C90A69700594A39 /* SVProgressHUD.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B15AB8BB1C90A71C00594A39 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B1AC86C91C8F15F700970F8B /* ViewController.swift */,
+				B1AC86D91C8F167D00970F8B /* LoginVC.swift */,
+				B15AB8B91C90A71100594A39 /* NotesListTVC.swift */,
+				B15AB8CD1C90AE9E00594A39 /* NoteVC.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		B1AC86BB1C8F15F700970F8B = {
 			isa = PBXGroup;
 			children = (
 				B1AC86C61C8F15F700970F8B /* iOSExperiments */,
 				B1AC86C51C8F15F700970F8B /* Products */,
+				B15AB8C01C90AD5600594A39 /* iOSExperiments-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,12 +110,16 @@
 			isa = PBXGroup;
 			children = (
 				B1AC86C71C8F15F700970F8B /* AppDelegate.swift */,
-				B1AC86C91C8F15F700970F8B /* ViewController.swift */,
 				B1AC86CB1C8F15F700970F8B /* Main.storyboard */,
 				B1AC86CE1C8F15F700970F8B /* Assets.xcassets */,
 				B1AC86D01C8F15F700970F8B /* LaunchScreen.storyboard */,
 				B1AC86D31C8F15F700970F8B /* Info.plist */,
-				B1AC86D91C8F167D00970F8B /* LoginVC.swift */,
+				B15AB8B11C908C2F00594A39 /* Model.xcdatamodeld */,
+				B15AB8C71C90AD7800594A39 /* Note+CoreDataProperties.swift */,
+				B15AB8C81C90AD7800594A39 /* Note.swift */,
+				B15AB8CB1C90ADCF00594A39 /* DataController.swift */,
+				B15AB8BB1C90A71C00594A39 /* Controllers */,
+				B15AB8B41C90A5EF00594A39 /* Frameworks */,
 			);
 			path = iOSExperiments;
 			sourceTree = "<group>";
@@ -77,6 +134,8 @@
 				B1AC86C01C8F15F700970F8B /* Sources */,
 				B1AC86C11C8F15F700970F8B /* Frameworks */,
 				B1AC86C21C8F15F700970F8B /* Resources */,
+				B15AB8BC1C90A8D300594A39 /* ShellScript */,
+				B15AB8BF1C90AA3700594A39 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +192,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B15AB8BC1C90A8D300594A39 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B1AC86C01C8F15F700970F8B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,7 +216,13 @@
 			files = (
 				B1AC86CA1C8F15F700970F8B /* ViewController.swift in Sources */,
 				B1AC86C81C8F15F700970F8B /* AppDelegate.swift in Sources */,
+				B15AB8CA1C90AD7800594A39 /* Note.swift in Sources */,
 				B1AC86DA1C8F167D00970F8B /* LoginVC.swift in Sources */,
+				B15AB8B31C908C2F00594A39 /* Model.xcdatamodeld in Sources */,
+				B15AB8CC1C90ADCF00594A39 /* DataController.swift in Sources */,
+				B15AB8BA1C90A71100594A39 /* NotesListTVC.swift in Sources */,
+				B15AB8CE1C90AE9E00594A39 /* NoteVC.swift in Sources */,
+				B15AB8C91C90AD7800594A39 /* Note+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,10 +335,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iOSExperiments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.3ie.iOSExperiments;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOSExperiments-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -264,10 +353,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iOSExperiments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.3ie.iOSExperiments;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOSExperiments-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -290,8 +385,22 @@
 				B1AC86D81C8F15F700970F8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B15AB8B11C908C2F00594A39 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B15AB8B21C908C2F00594A39 /* Model.xcdatamodel */,
+			);
+			currentVersion = B15AB8B21C908C2F00594A39 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B1AC86BC1C8F15F700970F8B /* Project object */;
 }

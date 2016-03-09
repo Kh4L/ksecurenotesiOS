@@ -8,6 +8,7 @@
 
 import UIKit
 import LocalAuthentication
+import SVProgressHUD
 
 class LoginVC: UIViewController {
 
@@ -47,41 +48,38 @@ class LoginVC: UIViewController {
                                    reply: { (success: Bool, error: NSError?) in
                                     if success {
                                         debugPrint("Success")
+                                        
+                                        
+                                        dispatch_async(dispatch_get_main_queue()) {
+                                            SVProgressHUD.showSuccessWithStatus("Logged in!")
+                                        }
+                                        
                                         self.performSegueWithIdentifier("loggedInSegue", sender: nil)
                                     }
                                     if error != nil {
-                                        var message : NSString
-                                        var showAlert : Bool
+                                        var message : String
 
                                         switch(error!.code) {
                                             case LAError.AuthenticationFailed.rawValue:
                                                 message = "There was a problem verifying your identity."
-                                                showAlert = true
                                                 break;
                                             case LAError.UserCancel.rawValue:
                                                 message = "You pressed cancel."
-                                                showAlert = true
                                                 break;
                                             case LAError.UserFallback.rawValue:
                                                 message = "You pressed password."
-                                                showAlert = true
                                                 break;
                                             default:
-                                                showAlert = true
                                                 message = "Touch ID may not be configured"
                                                 break;
                                         }
                                         
-                                        let alertView = UIAlertController(title: "Error",
-                                            message: message as String, preferredStyle:.Alert)
-                                        let okAction = UIAlertAction(title: "Darn!", style: .Default, handler: nil)
-                                        alertView.addAction(okAction)
-                                        if showAlert {
-                                            self.presentViewController(alertView, animated: true, completion: nil)
+                                        dispatch_async(dispatch_get_main_queue()) {
+                                            SVProgressHUD.showErrorWithStatus(message)
                                         }
 
                                     }
-            })
+            }) 
         }
     }
     /*

@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Notes-->
         <scene sceneID="S3n-ad-lVh">
             <objects>
-                <tableViewController id="A82-0P-S8o" sceneMemberID="viewController">
+                <tableViewController title="Notes" id="A82-0P-S8o" customClass="NotesListTVC" customModule="iOSExperiments" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Foq-Rt-a79">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,16 +28,27 @@
                             <outlet property="delegate" destination="A82-0P-S8o" id="j4V-IQ-dg2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="G0T-kQ-civ"/>
+                    <navigationItem key="navigationItem" id="G0T-kQ-civ">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="eek-j9-ese">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NEd-je-0J3">
+                                <rect key="frame" x="538" y="1" width="42" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="plus"/>
+                                <connections>
+                                    <segue destination="6ab-9F-RIX" kind="show" id="SkV-Y4-0Eg"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmJ-QT-UeO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1588" y="655"/>
         </scene>
-        <!--View Controller-->
+        <!--NoteVC-->
         <scene sceneID="LQG-GN-0gT">
             <objects>
-                <viewController id="6ab-9F-RIX" sceneMemberID="viewController">
+                <viewController id="6ab-9F-RIX" customClass="NoteVC" customModule="iOSExperiments" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5X9-oO-246"/>
                         <viewControllerLayoutGuide type="bottom" id="VP2-TL-Bsa"/>
@@ -52,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="2282" y="655"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Notes-->
         <scene sceneID="JEB-0j-Scy">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uqS-7T-HMl" sceneMemberID="viewController">
+                <navigationController title="Notes" automaticallyAdjustsScrollViewInsets="NO" id="uqS-7T-HMl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DHW-fh-maT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -120,6 +131,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus" width="256" height="256"/>
         <image name="touch_id" width="512" height="512"/>
     </resources>
 </document>
